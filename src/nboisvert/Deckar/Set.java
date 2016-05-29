@@ -77,7 +77,7 @@ public class Set {
 
     public int getRandomCardIndex() {
         Random random = new Random();
-        return random.nextInt(this.count())-1;
+        return random.nextInt(this.count());
     }
 
     public Card showRandomCard(){
@@ -137,6 +137,15 @@ public class Set {
         return cards;
     }
 
+    public List<Card> withdrawAllCard(){
+        List<Card> cards = new ArrayList<>();
+        while(this.count() != 0){
+            System.out.println("\t" + this.count());
+            cards.add(this.withdrawTopCard());
+        }
+        return cards;
+    }
+
     public int topCardIndex(){
         return this.cards.size()-1;
     }
@@ -151,7 +160,7 @@ public class Set {
         for(Card card : this.cards){
             output += card.toString()+"\n";
         }
-        output += count + " card" + ((count > 1) ? "s" : "") + " in deck";
+        output += count + " card" + ((count > 1) ? "s" : "") + " in " + this.getClass().getSimpleName().toLowerCase();
         return output;
     }
 

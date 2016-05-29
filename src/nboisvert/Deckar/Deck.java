@@ -90,4 +90,12 @@ public class Deck extends Set{
             this.cards.add(card);
         }
     }
+
+    public void insertCard(List<Card> cards){
+        for(Card card : cards){
+            if(this.count(card) < this.deckCount){
+                this.cards.add(card);
+            }
+        }
+    }
 }
