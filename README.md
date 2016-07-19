@@ -36,7 +36,7 @@ Card card2 = new Card(Face.REDJOKER, Number.ACE); // Will become Joker anyway bu
 ```
 
 ### Playing with a card set
-Basically, the card set don't any validation method. You could but 5 thousands card of the Diamond Ace and no one would care. Instantiating a Set does not include any card, it's just a box where you'll put card.
+Basically, the card set don't have any validation method. You could put 5 thousands card of the Diamond Ace and no one would care. Instantiating a Set does not include any card, it's just a box where you'll put card.
 ```java
 Set set = new Set();
 set.count() //  Will returns 0
